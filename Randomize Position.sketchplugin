@@ -1,0 +1,20 @@
+var maxShift = [doc askForUserInput:"Max shift in pixels: " initialValue: "10"]
+
+for (var i=0; i < [selection count]; i++) {
+var item = selection[i]
+
+var moveLeft = Math.floor(Math.random() * (maxShift * 2)) - maxShift;
+var moveTop = Math.floor(Math.random() * (maxShift * 2)) - maxShift;
+
+var frame = [item absoluteRect]
+
+var x = [frame x];
+var y = [frame y];
+
+x = x + moveLeft;
+y = y + moveTop;
+
+[frame setX: x];
+[frame setY: y];
+
+}
